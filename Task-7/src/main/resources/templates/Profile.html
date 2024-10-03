@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Profile Information</h1>
+
+    <div class="profile-info">
+        <p><strong>Name:</strong> <span th:text="${employee.name}"></span></p>
+        <p><strong>Surname:</strong> <span th:text="${employee.surname}"></span></p>
+        <p><strong>Department:</strong> <span th:text="${employee.department}"></span></p>
+        <p><strong>Salary:</strong> <span th:text="${employee.salary}"></span></p>
+    </div>
+
+    <form th:action="@{/logout}" th:method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+</body>
+</html>
